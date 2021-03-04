@@ -1,0 +1,10 @@
+<h1>HOLA</h1>
+
+<ul>
+    <div *ngFor="let a of alumnos">
+
+        <li *ngIf="a.nombre.length > 4 ">
+            {{ a?.nombre }} - {{ a?.apellido }}- {{ a?.edad}}
+        </li>
+    </div>
+</ul>
