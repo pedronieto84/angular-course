@@ -9,6 +9,11 @@ import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { Componente1Component } from './components/componente1/componente1.component';
+import { PersonaComponent } from './components/persona/persona.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
 
 
 const config = {
@@ -24,16 +29,18 @@ const config = {
 @NgModule({
   declarations: [
     AppComponent,
-    Componente1Component
+    Componente1Component,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
+    MatSelectModule,
+    MatFormFieldModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule, // firestore
     AngularFireAuthModule, // auth
-    AngularFireStorageModule 
+    AngularFireStorageModule, BrowserAnimationsModule 
 
   ],
   providers: [],
